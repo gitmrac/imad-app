@@ -29,7 +29,7 @@ var articles={
     'article-three':{
         title:'Article-Two|Parag Garg',
         heading:'Article-Two',
-        date:'Mar 13,2018',
+        date:'Mar 23,2018',
         content:'<p>This is the content of my third article.</p>'
     },
 };
