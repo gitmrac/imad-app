@@ -11,8 +11,11 @@ var articles={
         title:'Article-One|Parag Garg',
         heading:'Article-One',
         date:'Mar 3,2018',
-        content:`<p>This is the content of my article.This is the content of my article.This is the content of my article.This is the content of my article.This is the content of my article.This is the content of my article.This is the content of my article.</p>
-                <p>This is the content of my article.<br>This is the content of my article.<br>This is the content of my article.<br>This is the content of my article.<br>This is the content of my article.<br>This is the content of my article.<br>This is the content of my article.</p>`
+        content:`
+        <p>This is the content of my article.This is the content of my article.This is the content of my article.This is the content of my article.This is the content of my article.This is the content of my article.This is the content of my article
+        </p>
+        <p>This is the content of my article.This is the content of my article.This is the content of my article.This is the content of my article.This is the content of my article.This is the content of my article.This is the content of my article.
+        </p>`
 },
     'article-two':{ 
         title:'Article-Two|Parag Garg',
