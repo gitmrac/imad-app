@@ -5,8 +5,55 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+
+var articleOne={
+    title:'Article-One|Parag Garg',
+    heading:'Article-One',
+    date:'Mar 3,2018',
+    content:`<p>This is the content of my article.This is the content of my article.This is the content of my article.This is the content of my article.This is the content of my article.This is the content of my article.This is the content of my article.</p>
+            <p>This is the content of my article.This is the content of my article.This is the content of my article.This is the content of my article.This is the content of my article.This is the content of my article.This is the content of my article.</p>
+            <p>This is the content of my article.This is the content of my article.This is the content of my article.This is the content of my article.This is the content of my article.This is the content of my article.This is the content of my article.</p>
+            <p>This is the content of my article.This is the content of my article.This is the content of my article.This is the content of my article.This is the content of my article.This is the content of my article.This is the content of my article.</p>
+            <p>This is the content of my article.This is the content of my article.This is the content of my article.This is the content of my article.This is the content of my article.This is the content of my article.This is the content of my article.</p>
+            <p>This is the content of my article.This is the content of my article.This is the content of my article.This is the content of my article.This is the content of my article.This is the content of my article.This is the content of my article.</p>`
+};
+function createTemplate(data){
+    var title = data.title;
+    var date = data.date;
+    var heading = data.heading;
+    var content = data.content;
+    
+    var htmlTemplate = `
+    <!DOCTYPE html>
+    <head>
+        <title>
+            ${title}
+        </title>
+        <meta name="viewport" content="width=devide-width, initial-scale"/>
+        <link href="/ui/style.css" rel="stylesheet" />
+        
+    </head>
+    <body>
+        <div class="container">
+            <h1>this is article one</h1>
+            <div>
+                <a href="/">Home</a>
+            </div>
+            <hr/>
+            <h3>
+               ${heading}
+            </h3>
+            <div>
+                ${date}
+            </div>
+            <div>
+            ${content}
+            </div></div></body></html>`;
+            return htmlTemplate;
+}
+
 app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+  res.send(createTemplate(articleOne));
 });
 
 app.get('/article-one',function(req, res){
